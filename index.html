@@ -17,7 +17,7 @@
       <h1 class="msg">{{ msg }}</h1>
 
       <div class="start">
-        <button class="btn" @click.prevent="start = !start; countDown(); setQue()">Start Quiz</button>
+        <button class="btn btn-start" @click.prevent="start = !start; countDown(); setQue()">Start Quiz</button>
       </div>
     </div>
     <!--  -->
@@ -33,10 +33,10 @@
       </div>
       <div class="content">
         <div class="question">
-          <p>{{ que.question }}</p>
+          <h1>{{ que.question }}</h1>
         </div>
         <div class="options">
-          <button class="btn btn-option" v-for="opt in que.option">{{ opt }}</button>
+          <button class="btn-option" v-for="opt in que.option">{{ opt }}</button>
         </div>
       </div>
 

@@ -91,7 +91,7 @@ new Vue({
       if (this.count > 0) setCount
     },
     setQue() {
-      this.que = this.questions[0]
+      this.que = this.questions[6]
     }
   }
 })

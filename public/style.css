@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Quintessential', cursive;
+  letter-spacing: 1px;
 }
 
 body {
@@ -41,13 +42,45 @@ body {
   width: 100%;
 }
 
-.start .btn {
+.start .btn-start {
   background-color: rgb(251, 255, 0);
   display: block;
   margin: 100px auto 0 auto;
 }
 
 .start .btn:hover {
+  background-color: rgb(255, 145, 0);
+}
+
+.question {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.question h1 {
+  text-align: center;
+}
+
+.options {
+  width: 100;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-option {
+  background-color: rgb(251, 255, 0);
+  width: 400px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 5px;
+  margin: 10px auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-option:hover {
   background-color: rgb(255, 145, 0);
 }
 
