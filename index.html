@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="public/style.css">
   <title>Document</title>
 </head>
+
 <body>
   <div class="main" id="app">
     <div class="inner-main" v-if="!start">
@@ -15,22 +17,36 @@
       <h1 class="msg">{{ msg }}</h1>
 
       <div class="start">
-        <button class="btn" @click.prevent="start = !start" @click="countDown">Start Quiz</button>
+        <button class="btn" @click.prevent="start = !start; countDown(); setQue()">Start Quiz</button>
       </div>
     </div>
-
+    <!--  -->
     <div class="inner-main" v-else>
       <div v-if="count > 0">
-          <h1 class="msg">{{ count }}</h1>
+        <h1 class="msg">Time remaining: {{ count }}</h1>
+
+
+        <!-- <div> {{ que.question }}</div> -->
       </div>
       <div v-if="count === 0">
-          <h1 class="msg">{{ timeOut }}</h1>
+        <h1 class="msg">{{ timeOut }}</h1>
       </div>
+      <div class="content">
+        <div class="question">
+          <p>{{ que.question }}</p>
+        </div>
+        <div class="options">
+          <button class="btn btn-option" v-for="opt in que.option">{{ opt }}</button>
+        </div>
+      </div>
+
+
     </div>
 
   </div>
-
   <script src="node_modules/vue/dist/vue.js"></script>
   <script type="text/javascript" src="public/app.js"></script>
+
 </body>
+
 </html>
