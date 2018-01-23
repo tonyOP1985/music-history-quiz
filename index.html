@@ -24,21 +24,24 @@
     <div class="inner-main" v-else>
       <div v-if="count > 0">
         <h1 class="msg">Time remaining: {{ count }}</h1>
-
+        <div class="content">
+          <div class="question">
+            <h1>{{ que.question }}</h1>
+          </div>
+          <div class="options">
+            <button class="btn-option" v-for="opt in que.option">{{ opt }}</button>
+          </div>
+        </div>
 
         <!-- <div> {{ que.question }}</div> -->
       </div>
       <div v-if="count === 0">
-        <h1 class="msg">{{ timeOut }}</h1>
-      </div>
-      <div class="content">
-        <div class="question">
-          <h1>{{ que.question }}</h1>
-        </div>
-        <div class="options">
-          <button class="btn-option" v-for="opt in que.option">{{ opt }}</button>
+        <h1 class="msg times-up">Times up! The correct answer is: {{ que.answer }}</h1>
+        <div class="incorrect">
+            <h1>X</h1>
         </div>
       </div>
+
 
 
     </div>

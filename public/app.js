@@ -68,7 +68,7 @@ new Vue({
         ]
       },
       {
-        question: "What is real name to the Richard Strauss composition used in \"2001: A Space Odyssey\"?",
+        question: "What is the real name to the Richard Strauss composition used in \"2001: A Space Odyssey\"?",
         answer: "Also sprach Zarathustra",
         option: [
           "Atmospheres",
@@ -82,7 +82,7 @@ new Vue({
   },
   methods: {
     countDown() {
-      let setCount = setTimeout(this.countDown, 500)
+      let setCount = setTimeout(this.countDown, 200)
       this.count--
 
       if (this.count === 0) {
