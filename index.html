@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Quintessential" rel="stylesheet">
+  <link rel="stylesheet" href="public/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main" id="app">
+    <div class="inner-main" v-if="!start">
+      <h1 class="msg title">Music History Quiz</h1>
+      <h1 class="msg">{{ msg }}</h1>
+
+      <div class="start">
+        <button class="btn" @click.prevent="start = !start" @click="countDown">Start Quiz</button>
+      </div>
+    </div>
+
+    <div class="inner-main" v-else>
+      <div v-if="count > 0">
+          <h1 class="msg">{{ count }}</h1>
+      </div>
+      <div v-if="count === 0">
+          <h1 class="msg">{{ timeOut }}</h1>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="node_modules/vue/dist/vue.js"></script>
+  <script type="text/javascript" src="public/app.js"></script>
+</body>
+</html>
