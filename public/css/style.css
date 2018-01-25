@@ -141,3 +141,9 @@ body {
     margin-top: 20px;
   }
 }
+
+@media(max-height: 480px) {
+  .main {
+    height: 100%;
+  }
+}
