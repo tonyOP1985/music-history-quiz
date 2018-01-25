@@ -43,10 +43,13 @@
       </div>
 
 
-      <div v-show="count === 0">
-        <div>
+      <div v-if="count === 0 && !userAnswer">
+        <div v-if="next < 8">
           <button class="btn btn-start" @click.prevent="setQue(); nextQuestion()">Next</button>
         </div>
+        <div v-if="next === 8">
+            <button class="btn btn-start" @click.prevent="results = !results">See Results</button>
+          </div>
       </div>
 
       <div v-show="correct">

@@ -12,7 +12,6 @@ body {
 
 .main {
   height: 100vh;
-  /* background-image: url(img/staff1.png); */
   background-image: url(img/musicNotes.jpg);
   background-size: cover;
   background-position: top;

@@ -109,13 +109,14 @@ new Vue({
           if (this.count === 0) {
             this.clearCount()
             if (!this.userAnswer) this.unanswered++
-          }
-        }, 100)
+          } 
+        }, 1000)
       }
     },
     setQue() {
       this.que = this.questions[this.next]
       this.next++
+      console.log(this.next)
       this.countDown()
     },
     nextQuestion() {
