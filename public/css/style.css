@@ -12,7 +12,7 @@ body {
 
 .main {
   height: 100vh;
-  background-image: url(img/musicNotes.jpg);
+  background-image: url(../img/musicNotes.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
