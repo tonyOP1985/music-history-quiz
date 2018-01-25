@@ -44,7 +44,7 @@ body {
   width: 100%;
 }
 
-.start .btn-start {
+.btn-start {
   background-color: rgb(251, 255, 0);
   display: block;
   margin: 100px auto 0 auto;
@@ -70,7 +70,7 @@ body {
   flex-direction: column;
 }
 
-.btn-option {
+.btn-option, .btn-option-answer {
   background-color: rgb(251, 255, 0);
   width: 400px;
   padding: 10px 0;
@@ -82,7 +82,7 @@ body {
   cursor: pointer;
 }
 
-.btn-option:hover {
+.btn-option:hover, .btn:hover {
   background-color: rgb(255, 145, 0);
 }
 

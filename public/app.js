@@ -2,15 +2,17 @@ new Vue({
   el: '#app',
   data: {
     msg: 'Quiz your knowledge of Baroque, Classical, and Romantic period music history.',
-    msg2: 'The quiz has started',
     start: false,
+    results: false,
     count: 30,
     timer: '',
-    timeOut: 'Time Ran Out',
     que: [],
     userAnswer: '',
     correct: false,
     incorrect: false,
+    correctAnswer: 0,
+    wrongAnswer: 0,
+    unanswered: 0,
     next: 0,
     questions: [
       {
@@ -104,16 +106,17 @@ new Vue({
       if (this.count <= 30) {
         this.timer = setInterval(() => {
           this.count--
-          if (this.count === 0) this.clearCount()
-        }, 200)
+          if (this.count === 0) {
+            this.clearCount()
+            if (!this.userAnswer) this.unanswered++
+          }
+        }, 100)
       }
     },
     setQue() {
       this.que = this.questions[this.next]
       this.next++
-      console.log(this.next, this.questions)
       this.countDown()
-      console.log(this.timer)
     },
     nextQuestion() {
       this.correct = false
@@ -125,9 +128,14 @@ new Vue({
       this.clearCount()
       if (this.userAnswer === this.que.answer) {
         this.correct = true
+        this.correctAnswer++
       } else if (this.userAnswer !== this.que.answer) {
         this.incorrect = true
-      }
+        this.wrongAnswer++
+      } 
+    },
+    reset() {
+      location.reload()
     }
   }
 })
