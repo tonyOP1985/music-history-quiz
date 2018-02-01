@@ -10,6 +10,10 @@ body {
   color: #fff;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 .main {
   height: 100vh;
   background-image: url(../img/musicNotes.jpg);
