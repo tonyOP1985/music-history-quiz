@@ -31,16 +31,16 @@
 
 <body>
   <div class="main" id="app" v-cloak>
-    <div class="inner-main" v-if="!start">
+    <div class="inner-main" v-if="!start" v-cloak>
       <h1 class="msg title">Music History Quiz</h1>
       <h1 class="msg">{{ msg }}</h1>
 
-      <div class="start">
+      <div class="start" v-cloak>
         <button class="btn btn-start" @click.prevent="start = !start; setQue()">Start Quiz</button>
       </div>
     </div>
 
-    <div class="inner-main" v-else-if="start && !results">
+    <div class="inner-main" v-else-if="start && !results" v-cloak>
       <div v-show="!userAnswer.length">
         <div v-show="count > 0">
           <h1 class="msg">Time remaining: {{ count }}</h1>
@@ -62,7 +62,7 @@
       </div>
 
 
-      <div v-if="count === 0 && !userAnswer">
+      <div v-if="count === 0 && !userAnswer" v-cloak>
         <div v-if="next < 8">
           <button class="btn btn-start" @click.prevent="setQue(); nextQuestion()">Next</button>
         </div>
@@ -71,7 +71,7 @@
         </div>
       </div>
 
-      <div v-show="correct">
+      <div v-show="correct" v-cloak>
         <div class="msg">Correct!</div>
         <div class="incorrect">
           <img src="public/img/Green_tick.svg.hi.png" alt="Green Check">
@@ -84,7 +84,7 @@
         </div>
       </div>
 
-      <div v-show="incorrect">
+      <div v-show="incorrect" v-cloak>
         <h1 class="msg times-up">Incorrect The correct answer is: {{ que.answer }}</h1>
         <div class="incorrect">
           <img src="public/img/Red_X.svg.png" alt="Red X">
@@ -98,7 +98,7 @@
       </div>
     </div>
 
-    <div class="inner-main" v-else-if="results">
+    <div class="inner-main" v-else-if="results" v-cloak>
       <div class="results">
         <h1 class="msg title">Results</h1>
         <h1 class="msg">Correct: {{ correctAnswer }}</h1>
