@@ -89,7 +89,7 @@ new Vue({
         question: "Beethoven's 3rd Symphony, the Sinfonia Erocia, was originally dedicated to which European leader?",
         answer: 'Napoleon Bonaparte',
         option: [
-          'King Georeg III',
+          'King George III',
           'Frederick Willian III',
           'Nikolaus Esterházy II',
           'Napoleon Bonaparte'
