@@ -116,7 +116,6 @@ new Vue({
     setQue() {
       this.que = this.questions[this.next]
       this.next++
-      console.log(this.next)
       this.countDown()
     },
     nextQuestion() {
