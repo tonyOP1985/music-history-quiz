@@ -6,13 +6,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "deploy": "gh-pages -d build"
   },
   "author": "Tony Oliver-Paull",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "gh-pages": "^3.2.3",
     "vue": "^2.5.13"
   },
   "engines": {
